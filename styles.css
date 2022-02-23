@@ -1,9 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@300;500&family=Roboto+Mono:wght@400;700&display=swap');
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     font-family: "Quicksand", serif;
     background-color: #B47978;
     }
 
 body {
     display: block;
+}
+h1 {
+    box-sizing: border-box;
+    border-radius: 0.2em;
+    padding: 0.5em;
+}
+footer {
+    box-sizing: border-box;
+    border-radius: 0.3em;
+    padding: 0.5em;
+    background-color: #B47978;
+    text-align: center;
+}
+img {
+    float: right;
+    width: 20em;
+    margin-top: -150px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border-radius: 0.2em;
+    box-shadow: 5px 5px 5px #999;
+}
+li a p {
+    width: auto;
+    white-space: nowrap;
+    display: inline-block;
+}
+.footer-p {
+    color: yellow;
+    justify-self: center;
+    width: auto;
+    margin-top: -10px;
+}
+footer a p {
+    display: inline-block;
+    white-space: nowrap;
+   
 }
