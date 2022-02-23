@@ -67,14 +67,13 @@ li a p {
     display: inline-block;
 }
 .footer-p {
-    color: rgb(241, 241, 35);
+    color: rgba(155, 11, 11, 0.561);
     justify-self: auto;
     width: auto;
-    margin-top: -10px;
+    margin-top: 0px;
 }
 footer a p {
     display: inline-block;
-    
    
 }
  
