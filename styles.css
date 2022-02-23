@@ -35,7 +35,7 @@ img {
     object-fit: contain;
     border-radius: 0.5em;
     box-sizing: border-box;
-    box-shadow: 5px 0px 0px #999;
+    box-shadow: 0px 3px 0px 3px #ffff;
 }
 li a p {
     width: auto;
@@ -53,3 +53,9 @@ footer a p {
     white-space: nowrap;
    
 }
+@media screen and (max-width: 550px) { 
+    /* beginning of media query */
+        .home-grid {
+        display: block;
+      }
+    }
