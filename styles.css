@@ -55,7 +55,7 @@ footer a p {
 }
 @media screen and (max-width: 550px) { 
     /* beginning of media query */
-        .home-grid {
+        body {
         display: block;
       }
     }
