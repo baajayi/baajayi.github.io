@@ -63,9 +63,18 @@ h3 {
     padding: 0em;
 }
 
-@media screen and (max-width: 500px) { 
-    /* beginning of media query */
-        body {
-        display: block;
-      }
+@media screen and (max-width: 900px) { 
+    /* beginning of media query for medium sized devices */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    }
+
+@media screen and (max-width: 600px) { 
+    /* beginning of media query for small devices */
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     }
