@@ -2,9 +2,10 @@
 h1, h3, h4, h5, h6 {
     font-family: "Quicksand", serif;
     background-color: #b0c4de;
+    font-weight: bold;
     }
 body {
-        max-width: 960px;
+        max-width: 1260px;
         margin:  auto;
         display: block;
 }
@@ -13,26 +14,23 @@ header {
     background-color: #b0c4de;
     padding: 0.1em;
     border-radius: 0.5em;
-
-}
-h1 {
-    padding-left: 3em;
+    text-align: center;
+    width: 100%;
 }
 h2 {
     font-family: "Roboto", sans-serif;
-    padding-left: 1em;
+    margin-top: -15px;
+    
 }
 li {
     font-family: "Quicksand", serif;
     margin-left: 2em;
 }
-.fami {
-    width: 25%;
-    float: right;
-    margin-top: -150px;
-    margin-right: 10px;
-    border-radius: 0.5em;
-    box-shadow: 0px 2px 0px 2px #b0c4de;
+article {
+    margin-top: 0.5em;
+}
+article img {
+    width: 100%;
 }
 
 footer {
@@ -46,10 +44,6 @@ footer  p {
     color: yellow;
     margin-top: 2px;
 }
-.design-header {
-    text-align: center;
-    width: 100%;
-}
 
 main {
     display: grid;
@@ -58,7 +52,8 @@ main {
 }
 main p {
     font-family: "Roboto", sans-serif;
-    font-size: 20;
+    font-size: 20px;
+
 
 }
 h3 {
@@ -71,17 +66,6 @@ h3 {
 @media screen and (max-width: 500px) { 
     /* beginning of media query */
         body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 1fr 1fr;
-      }
-      .fami {
-          float: none;
-          width: 100%;
-          grid-row: 3/5;
-          
-      }
-      h2 {
-          grid-row: 2/3;
+        display: block;
       }
     }
