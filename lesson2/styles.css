@@ -7,25 +7,25 @@ h1, h2, h3, h4, h5, h6 {
 .colored-heading {
    
     background-color:#55BCC9;
-    color: #ffff
+    
 }
 
 .primary {
-    color: #FC4445
+    color: #FC4445;
+    background-color: #333;
 }
 .secondary {
-    color: #3FEEE6
+    color: #3FEEE6;
+    background-color: #333;
 
 }
 .accent1 {
-    color: #55BCC9
+    color: #55BCC9;
+    background-color: #333;
 }
-.accent2 {
-    color: #ffff
-}
+
 .colored-paragraph {
     background-color:#55BCC9;
-    color: #ffff
 }
 .paragraph-example {
     font-family: "Josefin sans", sans-serif;
@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a:hover {
     padding: 0.1em;
-    color:#ffff;
     background-color: #3FEEE6;
 }
 body {
