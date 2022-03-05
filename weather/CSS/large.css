@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,700&family=Playfair+Display:wght@400;700&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
     background-color: #FC4445;
     text-align: center;
@@ -8,8 +8,15 @@ h1, h2, h3, h4, h5, h6 {
 body {
  max-width: 960px;
  margin: auto;
-
 }
+.main-heading {
+    background-color:#ffffff;
+    text-align: center;
+    width: 100%;
+    border: none;
+    padding: 5px;
+}
+
 nav {
     width: 100%;
     font-family: "Playfair Display";
