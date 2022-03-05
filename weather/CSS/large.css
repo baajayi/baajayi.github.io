@@ -31,12 +31,12 @@ nav a {
     padding: 0.5em;
     align-self: center;
     flex: 1 1 100%;
-    background-color: #FC4445;
+    background-color: #ffffff;    
     text-align: center;
     text-decoration: none;
 }
 nav a:hover{
-    background-color: #EEF4ED;
+    background-color: #FC4445;
 }
 header {
     display: flex;
