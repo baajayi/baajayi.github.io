@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,700&family=Playfair+Display:wght@400;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    background-color: #FC4445;
+    text-align: center;
+}
+body {
+ max-width: 960px;
+ margin: auto;
+
+}
+nav {
+    width: 100%;
+    font-family: "Playfair Display";
+    background-color: #EEF4ED;
+}
+nav  {
+   
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+a:first-child {
+    display: none;
+}
+nav a {
+    display: block;
+    padding: 0.5em;
+    align-self: center;
+    flex: 1 1 100%;
+    background-color: #FC4445;
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #EEF4ED;
+}
+header {
+    display: flex;
+    padding: 1em;
+    background-color: #FC4445;
+    font-style: italic;
+    align-self: center;
+    margin-bottom: 2px;
+}
+header div {
+    margin-top: -20px;
+}
+
+main {
+    
+    text-align: left;
+    font-family: "Josefin Sans", serif;
+    font-size: 20px;
+
+}
+main div {
+    padding: 0.5em;
+    border-style: dotted;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #EEF4ED;
+
+}
+footer {
+    background-color: #FC4445;
+    text-align: center;
+    font-family: "Playfair Display";
+}
+
+@media only screen and (max-width: 900px) { 
+    /* beginning of media query for medium sized devices */
+    nav  {
+        display: block;
+        text-align: center;
+    }
+    nav a {
+        display: block;
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 2px;
+    
+    }
+    nav a:first-child {
+        display: none;
+    }
+    }
+    @media only screen and (max-width: 500px) { 
+    /* beginning of media query for small devices */
+    nav a:first-child {
+        display: block;
+
+    }
+    nav a {
+        display: none;
+    }
+    .responsive a{
+        display: block;
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 2px;
+}
+.responsive a:hover {
+    background-color: #EEF4ED;
+}
+    }
+    
