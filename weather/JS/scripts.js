@@ -32,3 +32,8 @@ document.querySelector("#dateofnow").innerHTML = `${dayname}, ${d.getDate()} ${m
 function toggleMenu() {
 	document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
 }
+if (daysOfTheWeek[d.getDay()]==="Friday") {
+    let banner = document.createElement("h2")
+    banner.textContent = "Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion."
+    
+}

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,700&family=Playfair+Display:wght@400;700&display=swap');
 
-h1, h3, h4, h5, h6 {
+h1, h4, h5, h6 {
     font-family: "Playfair Display", serif;
     background-color: #FC4445;
     text-align: center;
@@ -17,18 +17,13 @@ body {
     padding: 5px;
 }
 
-nav {
-    width: 100%;
-    font-family: "Playfair Display";
 
-}
 nav  {
-   
-    list-style-type: none;
     display: flex;
     justify-content: center;
     width: 100%;
     padding: 0;
+    font-family: "Playfair Display";
 }
 a:first-child {
     display: none;
@@ -64,18 +59,77 @@ main {
     font-size: 20px;
 
 }
-main div {
+.latercontent {
     padding: 0.5em;
     border-style: dotted;
     margin-top: 1em;
     margin-bottom: 1em;
     background-color: #EEF4ED;
+    position: relative;
 
 }
+main div img {
+    height: 20em;
+}
+.weather {
+    position: absolute;
+	top: 125px;
+	left: 100px;
+    bottom: 100px;
+	background: radial-gradient(#eee, #FC4445);
+	border: 1px solid #000;
+	padding: 1.5rem;
+	box-shadow: 0 0 30px #333;
+	opacity: 0.9;
+}
+main div section p {
+    margin: 2px;
+}
+
 footer {
     background-color: #FC4445;
     text-align: center;
     font-family: "Playfair Display";
+}
+
+.latercontent1 img {
+    max-width: 50px;
+    max-height: 50px;
+}
+.day-weather {
+    display: grid;
+    border-right: 1px #000;
+    align-self: center;
+    flex: 1 1 100%;
+    border-left: 1px #000;
+
+}
+.latercontent1 {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    background-color: #EEF4ED;
+    border: 2px #000;
+    border-style: double;
+    margin-top: -30px;
+}
+.latercontent4 {
+    display: flex;
+}
+.day-label {
+    display: block;
+    background-color: #000;
+    color: #eee;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+}
+.dayname {
+    display: block;
+    text-align: center;
+    margin-right:  1em;
+    flex: 1;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 900px) { 
