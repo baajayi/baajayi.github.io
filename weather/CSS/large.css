@@ -108,7 +108,7 @@ footer {
     max-width: 50px;
     max-height: 50px;
 }
-.latercontent1 section {
+.latercontent1 .day-weather {
     display: block;
     border-right: 1px #000;
     align-self: center;
@@ -120,7 +120,7 @@ footer {
 .weather p {
     margin: 2px;
 }
-.latercontent1 section:hover {
+.latercontent1 .day-weather:hover {
     background-color:#FC4445;
 }
 
@@ -175,6 +175,19 @@ iframe {
         display: block;
         text-align: center;
     }
+    .weather {
+        position: absolute;
+        
+        left: 36px;
+        bottom: auto;
+        background: radial-gradient(#eee, #FC4445);
+        border: 1px solid #000;
+        padding: 1.5rem;
+        box-shadow: 0 0 30px #333;
+        opacity: 0.9;
+        text-align: center;
+    }
+
     nav a {
         display: block;
         flex: 1 1 auto;
@@ -201,9 +214,7 @@ iframe {
 
     @media only screen and (max-width: 500px) { 
     /* beginning of media query for small devices */
-    nav {
-       
-    }
+
     nav a:first-child {
         display: block;
     }
