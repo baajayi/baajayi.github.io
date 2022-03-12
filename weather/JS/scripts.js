@@ -31,6 +31,7 @@ document.querySelector("#dateofnow").innerHTML = `${dayname}, ${d.getDate()} ${m
 
 function toggleMenu() {
 	document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
+    
 }
 if (daysOfTheWeek[d.getDay()]==="Friday") {
     let banner = document.createElement("div")

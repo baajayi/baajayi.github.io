@@ -231,6 +231,18 @@ iframe {
         position: static;
         
     }
+    .latercontent4 {
+        display:block;
+        width: 90%;
+        padding: 4%;
+    }
+    iframe {
+        width: 90%;
+    
+    }
+    .forecast {
+       margin-left: auto;
+    }
     .responsive a{
         display: block;
         flex: 1 1 auto;
