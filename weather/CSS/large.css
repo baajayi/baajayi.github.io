@@ -236,8 +236,8 @@ iframe {
         width: 90%;
         padding: 4%;
     }
-    iframe {
-        width: 90%;
+    .map {
+        width: 75%;
     
     }
     .forecast {
