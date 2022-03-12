@@ -6,8 +6,8 @@ h1, h4, h5, h6 {
     text-align: center;
 }
 body {
- max-width: 960px;
  margin: auto;
+ max-width: 960px;
 }
 .main-heading {
     background-color:#ffffff;
@@ -59,6 +59,9 @@ main {
     font-size: 20px;
 
 }
+.forecast {
+ margin-left: 250px;
+}
 .latercontent {
     padding: 0.5em;
     border-style: dotted;
@@ -69,7 +72,7 @@ main {
 
 }
 main div img {
-    height: 20em;
+    width: 100%;
 }
 .weather {
     position: absolute;
@@ -82,7 +85,7 @@ main div img {
 	box-shadow: 0 0 30px #333;
 	opacity: 0.9;
 }
-main div section p {
+main div section  {
     margin: 2px;
 }
 
@@ -91,30 +94,44 @@ footer {
     text-align: center;
     font-family: "Playfair Display";
 }
-
+.latercontent1 {
+    display: flex;
+    
+    width: 98%;
+    padding: 2px;
+    background-color: #EEF4ED;
+    border: 2px #000;
+    border-style: double;
+}
 .latercontent1 img {
     max-width: 50px;
     max-height: 50px;
 }
-.day-weather {
-    display: grid;
+.latercontent1 section {
+    display: block;
     border-right: 1px #000;
     align-self: center;
-    flex: 1 1 100%;
-    border-left: 1px #000;
+  text-align: center;
+  height: 100px;
+  flex: 1 1 100%;
+  background-color: #3FEEE6;
+
 
 }
-.latercontent1 {
-    display: flex;
-    width: 100%;
-    padding: 0px;
-    background-color: #EEF4ED;
-    border: 2px #000;
-    border-style: double;
-    margin-top: -30px;
+.latercontent1 section:hover {
+    background-color:#FC4445;
 }
+
+.day-weather {
+    border: 2px #000;
+}
+
 .latercontent4 {
     display: flex;
+    background-color: #FC4445;
+}
+iframe {
+    padding: 1em;
 }
 .day-label {
     display: block;
@@ -124,13 +141,31 @@ footer {
     flex: 1;
     text-align: center;
 }
-.dayname {
+.day-label {
     display: block;
-    text-align: center;
-    margin-right:  1em;
+    background-color: #000;
+    color: #eee;
+    width: 100%;
     flex: 1;
-    justify-content: center;
+    text-align: center;
 }
+
+.article {
+    background-color: #EEF4ED;
+    padding: 2em;
+    margin: 1em;
+
+}
+.article img {
+   width: 40%;
+    float: right;
+    margin: 0px;
+}
+.latercontent4 a img {
+    width: 50px;
+    height: 50px;
+}
+
 
 @media only screen and (max-width: 900px) { 
     /* beginning of media query for medium sized devices */
