@@ -176,7 +176,7 @@ iframe {
     }
     .weather {
         position: absolute;
-        
+        top: 20px;
         left: 36px;
         bottom: auto;
         background: radial-gradient(#eee, #FC4445);
