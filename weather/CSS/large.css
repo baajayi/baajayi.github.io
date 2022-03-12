@@ -84,13 +84,14 @@ main div img {
 	padding: 1.5rem;
 	box-shadow: 0 0 30px #333;
 	opacity: 0.9;
+
 }
 main div section  {
     margin: 2px;
 }
 
 footer {
-    background-color: #FC4445;
+    text-decoration: none;
     text-align: center;
     font-family: "Playfair Display";
 }
@@ -102,6 +103,7 @@ footer {
     background-color: #EEF4ED;
     border: 2px #000;
     border-style: double;
+    margin-top: -30px;
 }
 .latercontent1 img {
     max-width: 50px;
@@ -115,8 +117,9 @@ footer {
   height: 100px;
   flex: 1 1 100%;
   background-color: #3FEEE6;
-
-
+}
+.weather p {
+    margin: 2px;
 }
 .latercontent1 section:hover {
     background-color:#FC4445;
@@ -182,6 +185,10 @@ iframe {
     }
     nav a:first-child {
         display: none;
+    }
+    .latercontent1{
+        display: flex;
+        flex: 1 1 auto;
     }
     }
     @media only screen and (max-width: 500px) { 

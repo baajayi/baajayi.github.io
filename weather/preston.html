@@ -50,16 +50,18 @@
     <main>
         <div class="main-heading"><h2>Preston Idaho</h2></div>
         <div class="latercontent">
-           <picture> <img src="images/hero-image-large.jpg" alt="hero image" sizes="100vw" srcset="images/hero-image-large.jpg 1200w images/hero-image-medium.jpg 900w, images/hero-image-small.jpg 500w"  > 
+           <picture> 
+              <source media="(max-width:500px)" srcset="images/hero-image-small.jpg">
+              <source media="(max-width:900px)" srcset="images/hero-image-medium.jpg"> <img src="images/hero-image-large.jpg" alt="hero image"> 
         
         </picture>
 
-            <section class="weather"><h3>Weather Summary</h3>
+            <div class="weather"><h3>Weather Summary</h3>
             <p><span>Temperature:</span></p>
        <p> <span>Wind Chill:
         </span></p>
    <p> <span>Humidity:</span></p>
-<p><span>Wind Speed:</span></p></section>
+<p><span>Wind Speed:</span></p></div>
         </div>
         <section>
             <h2 class="forecast">Five-Day Weather Forecast</h2>
@@ -95,7 +97,10 @@
         </div>
         <div class="latercontent4">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47365.72628268061!2d-111.91534445196395!3d42.09980531184411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!5e0!3m2!1sen!2sus!4v1646825783871!5m2!1sen!2sus" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <section><p>  &#x1F4E7;askus@everythingpreston.org </p>
+        <section>
+            <h3>Contact Us</h3>
+            <p>⚲ 5, Downtown Preston, Id
+            </p><p>  &#x1F4E7;askus@everythingpreston.org </p>
         <p>  &#128222; 123-555-6789</p>
     <a target="_blank" href="https://facebook.com"> <img src="images/facebook-icon.png" alt="facebook icon"></a>
     <a target="_blank" href="https://youtube.com"> <img src="images/youtube-icon.png" alt="youtube icon">
