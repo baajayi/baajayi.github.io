@@ -166,6 +166,11 @@ iframe {
     width: 50px;
     height: 50px;
 }
+.map {
+    width: 50%;
+    margin: 20px;
+
+}
 
 
 @media only screen and (max-width: 900px) { 
@@ -185,6 +190,11 @@ iframe {
         box-shadow: 0 0 30px #333;
         opacity: 0.9;
         text-align: center;
+    }
+    .latercontent4 {
+        width: 96%;
+        position: absolute;
+        right: auto;
     }
 
     nav a {
@@ -232,16 +242,23 @@ iframe {
         
     }
     .latercontent4 {
-        display:block;
+        display:flex;
+        flex: 1 1 100%;
+        flex-flow: column-reverse;
         width: 90%;
         padding: 4%;
     }
     .map {
-        width: 75%;
-    
+        margin-left: -5px;
+
     }
+   
     .forecast {
        margin-left: auto;
+    }
+    .article {
+        display: flex;
+        flex-flow: column;
     }
     .responsive a{
         display: block;
