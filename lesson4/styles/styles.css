@@ -11,7 +11,15 @@ footer {
 }
 @media screen and (max-width: 500px) { 
     /* beginning of media query */
-        body {
-            display: block;
-        }
-    }
+   body {
+    display: flex;
+    flex-flow: column;    
+    align-items: center;
+}
+img {
+    justify-self: center;
+}
+footer {
+    text-align: center;
+}
+}
