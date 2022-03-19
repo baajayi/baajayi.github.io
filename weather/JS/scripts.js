@@ -76,8 +76,8 @@ function adjustRating(rating) {
 }
 function selectResponse() {
 	const s = document.querySelector("#selected")
-	const sel = document.querySelector("#storm-region");
+	const sel = document.querySelector("#stormregion");
 	s.style.display = "block";
 	s.textContent = sel.value;
-	
 }
+
