@@ -215,10 +215,6 @@ fieldset {
     display: block;
     margin: 20px 2%;
 }
-.danger-label {
-    display: block;
-    margin: 10px 2%;
-}
 .danger {
     display: block;
 }

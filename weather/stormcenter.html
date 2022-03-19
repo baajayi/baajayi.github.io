@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="Storm Report page for Preston Weather Site" />
+    <meta
+      name="description"
+      content="Storm Report page for Preston Weather Site"
+    />
     <meta name="author" content="Bamidele Olawale Ajayi" />
 
     <!-- This start file was build by Paul Cheney  -->
@@ -40,13 +43,18 @@
 
     <main>
       <h2>Storm Center</h2>
-	  <h3 class="form-title">Report A Storm</h3>
+      <h3 class="form-title">Report A Storm</h3>
       <form method="get" action="thanks.html">
         <fieldset>
           <legend>Personal Details</legend>
           <label class="personal"
             >Full name*:
-            <input type="text" name="fname" pattern="([a-zA-Z-]{1,})([' ']?)([a-zA-Z-]{4,})([' ']?)([a-zA-Z-]{0,})" title="Minimum of five chars" required
+            <input
+              type="text"
+              name="fname"
+              pattern="([a-zA-Z-]{1,})([' ']?)([a-zA-Z-]{4,})([' ']?)([a-zA-Z-]{0,})"
+              title="Minimum of five chars"
+              required
           /></label>
           <label class="personal"
             >E-mail*:
@@ -60,13 +68,23 @@
             >Phone: <input type="tel" name="phone"
           /></label>
           <label class="personal"
-            >Zip*: <input type="number" name="zip" pattern="(\d{5}([\-]\d{4})?)" title="mandatory five numbers, with four optional numbers" required
+            >Zip Code*:
+            <input
+              type="text"
+              name="zip"
+              pattern="(\d{5}([\-]\d{4})?)"
+              title="mandatory five numbers, with four optional numbers"
+              required
           /></label>
         </fieldset>
         <fieldset>
           <legend>Storm Details</legend>
-          <label class="storm-details">Storm Date: <input type="date" name="date" /></label>
-          <label class="storm-details">Storm Type: <input name="Stormtype" list="Storms" /></label>
+          <label class="storm-details"
+            >Storm Date: <input type="date" name="date"
+          /></label>
+          <label class="storm-details"
+            >Storm Type: <input name="Stormtype" list="Storms"
+          /></label>
           <datalist id="Storms">
             <option value="Flash Flood"></option>
             <option value="Hail"></option>
@@ -75,7 +93,7 @@
             <option value="Tornado"></option>
           </datalist>
           <label class="storm-severity"
-            >Storm Severity: 
+            >Storm Severity:
             <input
               type="range"
               value="5"
@@ -85,8 +103,21 @@
               list="tickmarks"
               oninput="adjustRating(this.value)"
               onchange="adjustRating(this.value)"
-            /><span id="ratingvalue">  5</span></label
-          >
+            /><span id="ratingvalue"> 5</span>
+            <datalist id="tickmarks">
+              <option value="0"></option>
+              <option value="1"></option>
+              <option value="2"></option>
+              <option value="3"></option>
+              <option value="4"></option>
+              <option value="5"></option>
+              <option value="6"></option>
+              <option value="7"></option>
+              <option value="8"></option>
+              <option value="9"></option>
+              <option value="10"></option>
+            </datalist>
+          </label>
 
           <label class="storm-details"
             >Storm Region:
@@ -102,29 +133,36 @@
               <option value="Preston">Preston</option>
             </select>
           </label>
-         </fieldset>
-		 <fieldset> <legend>Danger Level</legend> <label class="danger-label"
-            >Are you in danger?
-            <label class="danger"
-              ><input type="radio" name="danger-level" value="Yes" /> Yes</label
-            >
-            <label class="danger"
-              ><input type="radio" name="danger-level" value="Maybe" />
-              Maybe</label
-            >
-            <label class="danger"
-              ><input type="radio" name="danger-level" value="No" /> No</label
-            >
-          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Danger Level</legend>
+          Are you in danger?
+          <label class="danger"
+            ><input type="radio" name="danger-level" value="Yes" /> Yes</label
+          >
+          <label class="danger"
+            ><input type="radio" name="danger-level" value="Maybe" />
+            Maybe</label
+          >
+          <label class="danger"
+            ><input type="radio" name="danger-level" value="No" /> No</label
+          >
         </fieldset>
         <fieldset>
           <legend>Additional Comments</legend>
-          <label class="storm-details">Any Comments? <textarea
-            placeholder="Please enter any other information in this box"
-          ></textarea></label>
+          <label class="storm-details"
+            >Any Comments?
+            <textarea
+              placeholder="Please enter any other information in this box"
+            ></textarea>
+          </label>
         </fieldset>
         <label
-          ><input class="submitbtn" type="submit" name="sbmtbtn" value="Report Storm"
+          ><input
+            class="submitbtn"
+            type="submit"
+            name="sbmtbtn"
+            value="Report Storm"
         /></label>
       </form>
 
