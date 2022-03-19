@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Storm Report page for Preston Weather Site" />
+    <meta name="author" content="Bamidele Olawale Ajayi" />
+
+    <!-- This start file was build by Paul Cheney  -->
+    <title>Preston Storm Report Page</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- STYLE SHEETS -->
+    <link href="CSS/normalize.css" rel="stylesheet" />
+    <link type="text/css" href="CSS/large.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <img src="images/preston-logo-mod.jpg" alt="preston logo" />
+      <section>
+        <h1>Everything Preston</h1>
+        <div>...whate'er you need to know about Preston</div>
+      </section>
+    </header>
+
+    <!-- NAVIGATION HERE -->
+    <nav class="navigation">
+      <a id="ham" href="#" onclick="toggleMenu()">&#9776; Menu </a>
+      <a href="#">Home</a>
+      <a href="preston.html">Preston</a>
+      <a href="#">Soda Springs</a>
+      <a href="#">Fish Haven</a>
+      <a class="active" href="stormcenter.html">Storm Center</a>
+      <a href="gallery-7.html">Gallery</a>
+    </nav>
+
+    <main>
+      <h2>Storm Center</h2>
+	  <h3 class="form-title">Report A Storm</h3>
+      <form method="get" action="thanks.html">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label class="personal"
+            >Full name*:
+            <input type="text" name="fname" pattern="([a-zA-Z-]{1,})([' ']?)([a-zA-Z-]{4,})([' ']?)([a-zA-Z-]{0,})" title="Minimum of five chars" required
+          /></label>
+          <label class="personal"
+            >E-mail*:
+            <input
+              type="email"
+              name="email"
+              placeholder="name@example.com"
+              required
+          /></label>
+          <label class="personal"
+            >Phone: <input type="tel" name="phone"
+          /></label>
+          <label class="personal"
+            >Zip*: <input type="number" name="zip" pattern="(\d{5}([\-]\d{4})?)" title="mandatory five numbers, with four optional numbers" required
+          /></label>
+        </fieldset>
+        <fieldset>
+          <legend>Storm Details</legend>
+          <label class="storm-details">Storm Date: <input type="date" name="date" /></label>
+          <label class="storm-details">Storm Type: <input name="Stormtype" list="Storms" /></label>
+          <datalist id="Storms">
+            <option value="Flash Flood"></option>
+            <option value="Hail"></option>
+            <option value="Hurricane"></option>
+            <option value="Thunderstorm"></option>
+            <option value="Tornado"></option>
+          </datalist>
+          <label class="storm-severity"
+            >Storm Severity: 
+            <input
+              type="range"
+              value="5"
+              min="1"
+              max="10"
+              step="1"
+              list="tickmarks"
+              oninput="adjustRating(this.value)"
+              onchange="adjustRating(this.value)"
+            /><span id="ratingvalue">  5</span></label
+          >
+
+          <label class="storm-details"
+            >Storm Region:
+
+            <select
+              name="Storm Region"
+              id="storm-region"
+              onchange="selectResponse()"
+            >
+              <option value="" disabled selected>Select Region ...</option>
+              <option value="Soda Springs">Soda Springs</option>
+              <option value="Fish Haven">Fish Haven</option>
+              <option value="Preston">Preston</option>
+            </select>
+          </label>
+         </fieldset>
+		 <fieldset> <legend>Danger Level</legend> <label class="danger-label"
+            >Are you in danger?
+            <label class="danger"
+              ><input type="radio" name="danger-level" value="Yes" /> Yes</label
+            >
+            <label class="danger"
+              ><input type="radio" name="danger-level" value="Maybe" />
+              Maybe</label
+            >
+            <label class="danger"
+              ><input type="radio" name="danger-level" value="No" /> No</label
+            >
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Additional Comments</legend>
+          <label class="storm-details">Any Comments? <textarea
+            placeholder="Please enter any other information in this box"
+          ></textarea></label>
+        </fieldset>
+        <label
+          ><input class="submitbtn" type="submit" name="sbmtbtn" value="Report Storm"
+        /></label>
+      </form>
+
+      <div class="latercontent4">
+        <img class="map" src="images/map.JPG" alt="Map" />
+        <div>
+          <h3>Contact Us</h3>
+          <p>⚲ 5, Downtown Preston, Id</p>
+          <p>&#x1F4E7;askus@everythingpreston.org</p>
+          <p>&#128222; 123-555-6789</p>
+          <a target="_blank" href="https://facebook.com">
+            <img src="images/facebook-icon.png" alt="facebook icon"
+          /></a>
+          <a target="_blank" href="https://youtube.com">
+            <img src="images/youtube-icon.png" alt="youtube icon"
+          /></a>
+          <a target="_blank" href="https://twitter.com">
+            <img src="images/twitter-icon.png" alt="twitter icon"
+          /></a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; <span id="year"></span> | Bamidele Olawale Ajayi</p>
+      <span id="dateofnow"></span>
+    </footer>
+
+    <script src="JS/scripts.js" defer></script>
+  </body>
+</html>
