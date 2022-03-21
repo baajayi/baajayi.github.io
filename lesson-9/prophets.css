@@ -8,6 +8,9 @@
 section {
     margin: 3px 5px;
 }
+section:hover {
+    box-shadow: 0px 0px 50px #333;
+}
 h2 {
     color: #0a2342;
 }
@@ -20,4 +23,17 @@ h4{
 }
 img {
     margin-bottom: 20px;
+}
+@media only screen and (max-width: 1200px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .cards {
+        display: block;
+        width: 100%;
+    }
 }
