@@ -1,0 +1,23 @@
+.cards {
+    background-color: #c4f5fc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 2%;
+    text-align: center;
+}
+section {
+    margin: 3px 5px;
+}
+h2 {
+    color: #0a2342;
+}
+h3, h4 {
+    margin-top: -10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h4{
+    margin-bottom: 0px;
+}
+img {
+    margin-bottom: 20px;
+}
