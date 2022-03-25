@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300;1,700&family=Playfair+Display:wght@400;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    background-color: #FC4445;
+    text-align: center;
+}
+
+
