@@ -360,6 +360,8 @@ input:required:valid {
     }
     .latercontent1{
         width: 96%;
+        display: flex;
+        flex-flow:nowrap;
     }
     .weather {
         width: 96%;
@@ -375,7 +377,8 @@ input:required:valid {
         flex: 1 1 100%;
         flex-flow: column-reverse;
         max-width: 90%;
-        padding: 4%;
+        margin: 0 2%;
+        padding: 2%;
     }
     .map {
         margin-left: -5px;
