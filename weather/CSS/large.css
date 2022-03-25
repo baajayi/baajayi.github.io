@@ -59,7 +59,7 @@ main {
 
 }
 .forecast {
- margin-left: 250px;
+text-align: center;
 }
 .latercontent {
     padding: 0.5em;
@@ -124,7 +124,7 @@ footer {
 }
 
 .day-weather {
-    border: 2px #000;
+    border: solid 2px #000;
 }
 
 .latercontent4 {
@@ -155,7 +155,6 @@ iframe {
     background-color: #EEF4ED;
     padding: 2em;
     margin: 1em;
-
 }
 .article img {
    width: 40%;
@@ -364,6 +363,9 @@ input:required:valid {
         padding: 2%;
         position: static;
         
+    }
+    .day-weather {
+        width: auto;
     }
     .latercontent4 {
         display:flex;
