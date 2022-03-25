@@ -358,6 +358,9 @@ input:required:valid {
         display: block;
         
     }
+    .latercontent1{
+        width: 96%;
+    }
     .weather {
         width: 96%;
         padding: 2%;
@@ -371,7 +374,7 @@ input:required:valid {
         display:flex;
         flex: 1 1 100%;
         flex-flow: column-reverse;
-        width: 90%;
+        max-width: 90%;
         padding: 4%;
     }
     .map {
