@@ -135,3 +135,4 @@ fetch(forecastInfo)
         //     document.getElementsByClassName("dayname").textContent = jsObject[x].
         // }
     )
+
