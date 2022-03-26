@@ -129,6 +129,8 @@ footer {
 
 .latercontent4 {
     display: flex;
+    flex: 1 1;
+    width: 100%;
     background-color: #FC4445;
 }
 iframe {
@@ -160,6 +162,9 @@ iframe {
    width: 40%;
     float: right;
     margin: 0px;
+}
+.article p a {
+    display: contents;
 }
 .latercontent4 a img {
     width: 50px;
@@ -302,8 +307,9 @@ input:required:valid {
     }
     .latercontent4 {
         width: 96%;
-        position: absolute;
         right: auto;
+        margin: 5px;
+
     }
 
     nav a {
@@ -320,7 +326,10 @@ input:required:valid {
         display: flex;
         flex-flow:nowrap;
     }
-    
+    main {
+        display: flex;
+        flex-flow: column;
+    }
     .active {
         background-color: #3FEEE6;
        color: #000;
@@ -358,6 +367,11 @@ input:required:valid {
         display: block;
         
     }
+    main {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
     .latercontent1{
         width: 96%;
         display: flex;
@@ -376,22 +390,23 @@ input:required:valid {
         display:flex;
         flex: 1 1 100%;
         flex-flow: column-reverse;
-        max-width: 90%;
-        margin: 0 2%;
-        padding: 2%;
+        max-width: 96%;
+        margin: 5px;
+        align-items: center;
+
     }
     .map {
-        margin-left: -5px;
-
+        margin-left: -60px;
     }
-   
+
     .forecast {
-       margin-left: auto;
+       margin-left: inherit;
     }
-
     .article {
         display: flex;
         flex-flow: column;
+        padding: 0.5em;
+        border-radius: 2em;
     }
     .article img {
         width: 100%;
@@ -419,5 +434,6 @@ figure:hover {
 legend {
     text-align: center;
 }
+
     }
     
