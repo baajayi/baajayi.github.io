@@ -106,11 +106,13 @@ footer {
 .latercontent1 img {
     max-width: 50px;
     max-height: 50px;
+    align-self: center;
 }
 .latercontent1 .day-weather {
-    display: block;
+    display: flex;
+    flex-flow: column;
     border-right: 1px #000;
-    align-self: center;
+   
   text-align: center;
   height: 100px;
   flex: 1 1 100%;
@@ -124,7 +126,9 @@ footer {
 }
 
 .day-weather {
+    display: block;
     border: solid 2px #000;
+    text-align: center;
 }
 
 .latercontent4 {
