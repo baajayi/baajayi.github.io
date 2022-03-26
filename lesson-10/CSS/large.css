@@ -137,9 +137,7 @@ footer {
     width: 100%;
     background-color: #FC4445;
 }
-iframe {
-    padding: 1em;
-}
+
 .day-label {
     display: block;
     background-color: #000;
@@ -175,9 +173,11 @@ iframe {
     height: 50px;
 }
 .map {
-    width: 50%;
-    margin: 20px;
-
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    margin: 0.2em;
+    padding: 0.2em;
 }
 .active {
     background-color: #3FEEE6;
