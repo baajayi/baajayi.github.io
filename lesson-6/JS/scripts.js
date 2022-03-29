@@ -123,6 +123,8 @@ fetch(requestURL)
           let img = document.createElement("img")
           img.setAttribute("src", "./images/town" + (i+1) +".jpg")
           img.setAttribute("alt", towns[i].name)
+          img.style.width = "100%"
+          img.style.height = "auto"
           card.appendChild(img)
          
          
