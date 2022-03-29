@@ -34,20 +34,20 @@ function toggleMenu() {
     
 }
 
-const fishWeatherInfo = "https://api.openweathermap.org/data/2.5/weather?id=5585010&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
+const WeatherInfo = "https://api.openweathermap.org/data/2.5/weather?id=5585010&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
 
-const fishForecastInfo = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
-fetch(fishWeatherInfo)
+const ForecastInfo = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
+fetch(WeatherInfo)
     .then(response => response.json())
     .then((jsObject) => {
         
-        console.log(jsObject)
-        document.getElementById("fishcurrentweather").textContent = jsObject.weather[0].description
-        document.getElementById("fishtemp").textContent = parseFloat(jsObject.main.temp)
-        document.getElementById("fishspeed").textContent = parseFloat((jsObject.wind.speed))
-        document.getElementById("fishhumid").textContent = jsObject.main.humidity
+        // console.log(jsObject)
+        document.getElementById("currentweather").textContent = jsObject.weather[0].description
+        document.getElementById("temp").textContent = parseFloat(jsObject.main.temp)
+        document.getElementById("speed").textContent = parseFloat((jsObject.wind.speed))
+        document.getElementById("humid").textContent = jsObject.main.humidity
     })
-fetch(fishForecastInfo)
+fetch(ForecastInfo)
     .then(response => response.json())
     .then((jsObject) => {
         //  console.log(jsObject)
@@ -64,7 +64,7 @@ fetch(fishForecastInfo)
             h3d.textContent = daysOfTheWeek[new Date(datesOfWeather[x].dt_txt).getDay()]
             h3d.setAttribute("class", "dayname")
             card.appendChild(h3d)
-            document.querySelector("div.fishlatercontent1").appendChild(card)
+            document.querySelector("div.latercontent1").appendChild(card)
             let img = document.createElement("img")
             img.setAttribute("src", 'https://openweathermap.org/img/w/' + datesOfWeather[x].weather[0].icon + '.png')
             img.setAttribute("alt", datesOfWeather[x].weather[0].description)
@@ -89,13 +89,13 @@ fetch(fishForecastInfo)
         //     document.getElementsByClassName("dayname").textContent = jsObject[x].
         // }
     )
-const fishtemp = parseFloat(document.getElementById("fishtemp").innerHTML, 10)
-const fishspeed = parseFloat(document.getElementById("fishspeed").innerHTML, 10)
-if (fishtemp <= 50 && fishspeed > 3){
-    let fishchill = 35.74 + (0.6215 * fishtemp) - (35.75 * (fishspeed^0.16)) + (0.4275 * fishtemp * (fishspeed^0.16))
-    document.querySelector("#fishchill").innerHTML = fishchill.toFixed(2)
+const temp = parseFloat(document.getElementById("temp").innerHTML, 10)
+const speed = parseFloat(document.getElementById("speed").innerHTML, 10)
+if (temp <= 50 && speed > 3){
+    let chill = 35.74 + (0.6215 * temp) - (35.75 * (speed^0.16)) + (0.4275 * temp * (speed^0.16))
+    document.querySelector("#chill").innerHTML = fishchill.toFixed(2)
 } else {
-    document.querySelector("#fishchill").innerHTML = "N/A"
+    document.querySelector("#chill").innerHTML = "N/A"
 }
 const requestURL = "https://byui-cit230.github.io/weather/data/towndata.json"
 
@@ -106,7 +106,7 @@ fetch(requestURL)
       .then(function (jsonObject) {
           const towns = jsonObject["towns"]
           for (let i=0; i < 7; i++) {
-            if (towns[i].name === "Fish Haven" ){
+            if (towns[i].name === "Preston" ){
                 const card = document.createElement("section")
                 const h3e = document.createElement("marquee")
                 h3e.setAttribute("behavior", "scroll")
