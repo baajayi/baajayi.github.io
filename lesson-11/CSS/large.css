@@ -103,7 +103,37 @@ footer {
     border-style: double;
     margin-top: -30px;
 }
+.fishlatercontent1 {
+    display: flex;
+    
+    width: 98%;
+    padding: 2px;
+    background-color: #EEF4ED;
+    border: 2px #000;
+    border-style: double;
+    margin-top: -30px;
+}
+.sodalatercontent1 {
+    display: flex;
+    
+    width: 98%;
+    padding: 2px;
+    background-color: #EEF4ED;
+    border: 2px #000;
+    border-style: double;
+    margin-top: -30px;
+}
 .latercontent1 img {
+    max-width: 50px;
+    max-height: 50px;
+    align-self: center;
+}
+.fishlatercontent1 img {
+    max-width: 50px;
+    max-height: 50px;
+    align-self: center;
+}
+.sodalatercontent1 img {
     max-width: 50px;
     max-height: 50px;
     align-self: center;
@@ -118,10 +148,36 @@ footer {
   flex: 1 1 100%;
   background-color: #3FEEE6;
 }
+.fishlatercontent1 .day-weather {
+    display: flex;
+    flex-flow: column;
+    border-right: 1px #000;
+   
+  text-align: center;
+  height: 100px;
+  flex: 1 1 100%;
+  background-color: #3FEEE6;
+}
+.sodalatercontent1 .day-weather {
+    display: flex;
+    flex-flow: column;
+    border-right: 1px #000;
+   
+  text-align: center;
+  height: 100px;
+  flex: 1 1 100%;
+  background-color: #3FEEE6;
+}
 .weather p {
     margin: 2px;
 }
 .latercontent1 .day-weather:hover {
+    background-color:#FC4445;
+}
+.fishlatercontent1 .day-weather:hover {
+    background-color:#FC4445;
+}
+.sodalatercontent1 .day-weather:hover {
     background-color:#FC4445;
 }
 
@@ -344,6 +400,14 @@ input:required:valid {
         display: flex;
         flex-flow:nowrap;
     }
+    .fishlatercontent1{
+        display: flex;
+        flex-flow:nowrap;
+    }
+    .sodalatercontent1{
+        display: flex;
+        flex-flow:nowrap;
+    }
     main {
         display: flex;
         flex-flow: column;
@@ -413,6 +477,16 @@ input:required:valid {
         text-align: center;
     }
     .latercontent1{
+        width: 96%;
+        display: flex;
+        flex-flow:nowrap;
+    }
+    .fishlatercontent1{
+        width: 96%;
+        display: flex;
+        flex-flow:nowrap;
+    }
+    .sodalatercontent1{
         width: 96%;
         display: flex;
         flex-flow:nowrap;

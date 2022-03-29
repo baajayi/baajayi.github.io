@@ -89,7 +89,8 @@ fetch(requestURL)
       .then(function (jsonObject) {
         console.table(jsonObject);  // temporary checking for valid response and data parsing
         const towns = jsonObject["towns"]
-        for (let i=0; i < 3; i++) {
+        for (let i=0; i < 7; i++) {
+            if (towns[i].name == "Preston" || towns[i].name === "Fish Haven" || towns[i].name == "Soda Springs"){
           let card = document.createElement('section');
           let h2 = document.createElement('h2');
           h2.textContent = towns[i].name
@@ -101,7 +102,7 @@ fetch(requestURL)
           h3m.style.marginTop = "-25px"
           h3m.style.textAlign = "center"
           card.appendChild(h3m)
-          document.querySelector('div.cards').appendChild(card);
+          document.querySelector("div.cards").appendChild(card);
           let h3y = document.createElement("h3");
           h3y.textContent = "Year Founded: " + towns[i].yearFounded
           h3y.style.textAlign = "center"
@@ -127,7 +128,7 @@ fetch(requestURL)
          
 
         }
-          
+    } 
         });
 // document.querySelector("#year").innerHTML = new Date().getFullYear()
 // document.querySelector("#date").innerHTML = new Date(document.lastModified).toLocaleString()
@@ -142,13 +143,13 @@ fetch(weatherInfo)
         console.log(jsObject)
         document.getElementById("currentweather").textContent = jsObject.weather[0].description
         document.getElementById("temp").textContent = jsObject.main.temp
-        document.getElementById("speed").textContent = (jsObject.wind.speed * 2.237).toFixed(2)
+        document.getElementById("speed").textContent = (jsObject.wind.speed).toFixed(2)
         document.getElementById("humid").textContent = jsObject.main.humidity
     })
 fetch(forecastInfo)
     .then(response => response.json())
     .then((jsObject) => {
-        // console.log(jsObject)
+        console.log(jsObject)
     
         // for (let x = 0; x < jsObject["list"].length; x++){
         const datesOfWeather = jsObject["list"].filter((climate) =>{
@@ -176,15 +177,7 @@ fetch(forecastInfo)
 
     
         }
-    }
-        // const dayname = new Date(datesOfWeather.dt_txt).getDay()
-        // console.log(datesOfWeather)
+    })
 
-        // const dateOfWeather = jsObject.list[x].dt_txt
-        // return dateOfWeather
 
-                       // for (let x = 0; x < 5; x++) {
-        //     document.getElementsByClassName("dayname").textContent = jsObject[x].
-        // }
-    )
-
+    
