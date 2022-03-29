@@ -71,6 +71,7 @@ text-align: center;
 }
 main div img {
     width: 100%;
+    height: auto;
 }
 .weather {
     position: absolute;
@@ -511,6 +512,8 @@ input:required:valid {
     }
     .map {
         margin-left: -60px;
+        width: 96%;
+        height: auto;
     }
 
     .forecast {
@@ -559,6 +562,7 @@ legend {
 }
 .cards section img {
     width: 96%;
+    height: auto;
     margin: 0 auto;
 }
     }
