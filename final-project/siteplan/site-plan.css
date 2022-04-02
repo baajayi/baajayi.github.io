@@ -3,15 +3,19 @@
 nav {
     background-color: #ffc1cf;
     display: flex;
+    flex: 1 1 100%;
     padding: 5px;
     text-align: center;
+
+    
+
 }
 nav a {
     display: flex;
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     padding: 20px;
+    justify-content: center;
     background-color: #b7ffd8;
-    text-align: center;
     font-family: "Roboto", sans-serif;
 }
 p {
@@ -81,4 +85,12 @@ main {
 }
 .font-two {
     font-family: "PT+Sans";
+}
+@media only screen and (max-width: 500px) {
+    body {
+        display: block;
+    }
+    nav {
+        display: block;
+    }
 }
