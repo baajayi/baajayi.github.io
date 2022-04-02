@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+nav {
+    background-color: #ffc1cf;
+    display: flex;
+    padding: 5px;
+    text-align: center;
+}
+nav a {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 20px;
+    background-color: #b7ffd8;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+p {
+    font-size: 25px;
+    font-family: "PT+Sans", serif;
+}
+footer{
+    text-align: center;
+    background-color: #ffc1cf;
+    padding: 1em;
+}
+header {
+    background-color: #ffc1cf;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    align-self: center;
+    margin-bottom: 2px;
+}
+article {
+    margin: 1em;
+}
+article p {
+    font-style: italic;
+    margin-top: -20px;
+}
+nav a:hover {
+    color: #333;
+    background-color: #e8ffb7;
+}
+h2, h3 {
+    background-color: #e2a0ff;
+    text-align: center;
+}
+body {
+    max-width: 960px;
+    margin: auto;
+    
+    
+}
+main {
+    background-color: #b7ffd8;
+}
+.active {
+    background-color: whitesmoke;
+    color: black;
+}
+.primary {
+    color:#b7ffd8;
+    background-color: #333;
+
+}
+.secondary {
+    color: #e2a0ff;
+    background-color: #333;
+}
+.accent-one {
+    color: #c4f5fc;
+    background-color: #333;
+}
+.accent-two {
+    color: #e8ffb7;
+    background-color: #333;
+}
+.font-one {
+    font-family: "Roboto";
+}
+.font-two {
+    font-family: "PT+Sans";
+}

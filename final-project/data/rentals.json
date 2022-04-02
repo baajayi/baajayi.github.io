@@ -1,0 +1,60 @@
+{
+  "rentals": [
+    {
+      "name": "Honda Metro Scooter",
+      "photo": "sodasprings.jpg",
+      "maximumPersons": 1,
+      "reservationHalfDay": 20,
+      "reservationFullDay": 30,
+      "walkInHalfDay": 25,
+      "walkInFullDay": 35
+    },
+    {
+      "name": "Honda Dio Scooter",
+      "photo": "springfield.jpg",
+      "maximumPersons": 2,
+      "reservationHalfDay": 30,
+      "reservationFullDay": 40,
+      "walkInHalfDay": 35,
+      "walkInFullDay": 45
+    },
+    {
+      "name": "Honda PCX150 Scooter",
+      "photo": "fishhaven.jpg",
+      "maximumPersons": 2,
+      "reservationHalfDay": 40,
+      "reservationFullDay": 50,
+      "walkInHalfDay": 45,
+      "walkInFullDay": 55
+    },
+    {
+      "name": "Honda Pioneer ATV",
+      "photo": "franklin.jpg",
+      "maximumPersons": 4,
+      "reservationHalfDay": 50,
+      "reservationFullDay": 70,
+      "walkInHalfDay": 60,
+      "walkInFullDay": 80
+    },
+    {
+      "name": "Jeep Wrangler—4",
+      "photo": "greenville.jpg",
+      "maximumPersons": 5,
+      "reservationHalfDay": 70,
+      "reservationFullDay": 100,
+      "walkInHalfDay": 85,
+      "walkInFullDay": 125
+   
+    },
+    {
+      "name": "Jeep Wrangler—2 ",
+      "photo": "placerton.jpg",
+      "maximumPersons": 4,
+      "reservationHalfDay": 60,
+      "reservationFullDay": 85,
+      "walkInHalfDay": 70,
+      "walkInFullDay": 90
+    }
+   
+  ]
+}
