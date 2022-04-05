@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="site-plan.css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
     <title>Scoot Island Home Page</title>
 </head>
 <body>
@@ -16,25 +16,38 @@
         <p>Forget your struggles and enjoy Coruzel</p></article></header>
         <nav>
             <a class="active" href="#">Home</a>
-            <a href="#">Rentals</a>
-            <a href="#">Reservations</a>
+            <a href="rentals.html">Rentals</a>
+            <a href="reservations.html">Reservations</a>
             <a href="#">Tours</a>
             <a href="#">Contact</a>
         </nav>
         <main>
-            <img src="images/jeep.jpg" alt="main image">
+            <div class="banner-div"> <img class="banner" src="images/banner.jpg" alt="main image"><section>
+                <button>Click to make a Reservation</button>
+             </section>
             <div class="weather">
-                <h3>Weather Summary</h3>
+                <h2>Weather Summary</h2>
                 <p>Currently: <span id="currentweather"></span></p>
                 <p>Temperature:<span id="temp"> </span>°F</p>
                 <p>Wind Chill: <span id="chill"> </span>°F</p>
                 <p>Humidity: <span id="humid">  </span>%</p>
                 <p>Wind Speed:<span id="speed">  </span>mph</p>
-              </div>
-              <section>
-                  <a href="#">Click here to make a rental reservation</a>
-              </section>
+              </div></div>
               <div class="forecast"></div>
+              <div class="rentals">
+                <h2>Rental Types</h2>
+                  <article><h3>Honder Scooters</h3>
+                <img src="./images/rental1.jpg" alt="scooters">
+                <p>Price ranges from $20- $50 for reservations and $25 to $55 for Walk-in Guests</p>
+            
+            </article>
+                  <article><h3>ATV Side by Side</h3>
+                <img src="./images/rental7.jpg" alt="ATV">
+                <p>Price ranges from $50- $70 for reservations and $60 to $80 for Walk-in Guests</p></article>
+                  <article><h3>Jeeps</h3>
+                <img src="./images/jeep.jpg" alt="jeep">
+                <p>Price ranges from $60- $100 for reservations and $70 to $125 for Walk-in Guests</p></article>
+              </div>
 
         </main>
         <footer>

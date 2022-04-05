@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+nav {
+    background-color: #ffc1cf;
+    display: flex;
+    flex: 1 1 100%;
+    padding: 5px;
+    text-align: center;
+
+    
+
+}
+nav a {
+    display: flex;
+    flex: 1 1 100%;
+    padding: 20px;
+    justify-content: center;
+    background-color: #b7ffd8;
+    font-family: "Roboto", sans-serif;
+}
+p {
+    font-size: 25px;
+    font-family: "PT+Sans", serif;
+}
+footer{
+    text-align: center;
+    background-color: #ffc1cf;
+    padding: 1em;
+}
+header {
+    background-color: #ffc1cf;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    align-self: center;
+    margin-bottom: 2px;
+}
+article {
+    margin: 1em;
+}
+article p {
+    font-style: italic;
+    margin-top: -20px;
+}
+nav a:hover {
+    color: #333;
+    background-color: #e8ffb7;
+}
+h2, h3 {
+    background-color: #e2a0ff;
+    text-align: center;
+}
+body {
+    max-width: 960px;
+    margin: auto;
+    
+    
+}
+.rentals {
+    width: 96%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.rentals h2 {
+    grid-column: 1/4;
+    grid-row: 1;
+}
+.rentals img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+.day-label {
+    display: block;
+    background-color: #000;
+    color: #eee;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+}
+.day-weather {
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column;
+    border: solid 3px #b7ffd8;
+    background-color: #e2a0ff;
+    text-align: center;
+}
+.day-weather:hover {
+    background-color: #b7ffd8;
+}
+.day-weather img {
+    max-width: 50px;
+    max-height: 50px;
+    align-self: center;
+}
+.forecast {
+    display: flex;
+    flex-flow: nowrap;
+    }
+main {
+    background-color: #b7ffd8;
+}
+article p {
+    margin-top: 2px;
+}
+.active {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.banner-div {
+    position: relative;
+}
+.banner-div button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100px;
+    max-width: 20rem;
+    background: radial-gradient(#eee, #e2a0ff);
+    opacity: 0.9;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.weather {
+    position: absolute;
+    bottom: 20px;
+    font-size: small;
+    right: 100px;
+	background: radial-gradient(#eee, #b7ffd8);
+	border: 1px solid #000;
+	padding: 0.5em;
+	box-shadow: 0 0 30px #333;
+	opacity: 0.9;
+    text-align: center;
+}
+.weather p {
+    margin: 2px;
+    font-size: 20px;
+}
+
+.rental-section {
+    margin: .3em;
+}
+table, th, td {
+    border: 1px solid #333;
+    text-align: center;
+}
+table {
+    margin: 2em;
+}
+@media only screen and (max-width: 500px) {
+    body {
+        display: block;
+    }
+    nav {
+        display: block;
+    }
+    .rentals {
+        display: block;
+    }
+}

@@ -78,6 +78,25 @@ fetch(rentalURL)
     .then((jsObject) =>{
     console.table(jsObject)
     for (i=0; i < jsObject.length; i++) {
-        
+        let card = document.createElement('section');
+          let h2 = document.createElement('h2');
+          h2.textContent = "Scooter Name: " + rentals[i].name 
+          card.appendChild(h2);
+          let h3m = document.createElement("h3")
+          h3m.textContent = "Maximum number of Occupants: " + rentals[i].maximumPersons
+          h3m.style.fontWeight = "normal"
+          h3m.style.fontStyle = "italic"
+          h3m.style.marginTop = "-25px"
+          h3m.style.textAlign = "center"
+          card.appendChild(h3m)
+          document.querySelector("div.rentals").appendChild(card);
+          div.appendChild(h2)
+          div.appendChild(h3m)
+          let img = document.createElement("img")
+          img.setAttribute("src", rentals[i].photo)
+          img.setAttribute("alt", rentals[i].name)
+          img.style.width = "100%"
+          img.style.height = "auto"
+          card.appendChild(img)
     }
     })
