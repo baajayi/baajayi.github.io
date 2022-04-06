@@ -131,7 +131,7 @@ article p {
     max-width: 20rem;
     border: 6px solid #000;
     border-radius: 25px;
-    font-size: 30px;
+    
 }
 .tour-page {
     display:grid;
@@ -354,6 +354,6 @@ header {
 .banner-div {
     display: flex;
     flex-flow: column;
-    flex-flow: 1 1 auto;
+    
 }
 }
