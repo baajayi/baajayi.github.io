@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scoot Island Reservation Page">
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <title>Scoot Island Home Page</title>
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+    <title>Scoot Island Reservation Page</title>
 </head>
-<body>
+<body class="main-body">
     <header>
     
          <img src="images/scoot-logo.jpg" alt="site-logo">
          <article class="header">
         <h1>Scoot Island</h1>
-        <p>Forget your struggles and enjoy Coruzel</p></article></header>
-        <nav>
+        <p>Enjoy Coruzel</p></article></header>
+        <nav class="navigation"> 
+            <a id="ham" href="#" onclick="toggleMenu()">&#9776; Menu </a>
             <a  href="index.html">Home</a>
             <a  href="rentals.html">Rentals</a>
             <a class="active" href="#">Reservations</a>
-            <a href="#">Tours</a>
-            <a href="#">Contact</a>
+            <a href="tours.html">Tours</a>
+            <a href="contact.html">Contact</a>
         </nav>
 <main>
+  <h2>Rental and Reservation Conditions</h2>
+  <p class="rental-agreement"> &rarr;To confirm your reservation, a $50 deposit is required <br>
+    &rarr;You are required to provide a valid drivers license at the time of rental<br>
+    &rarr;No one under the age of 12 is allowed to ride on the sccoters at any time<br>
+    &rarr;Fuel charge is not included in the fares displayed on this website<br>
+    &rarr;There is no additional payment for liability insurance<br>
+    &rarr;Reservations made less than 24hours will be charged at Walk-in rates<br>
+    &rarr;Delivery to hotels, AirBNB and other locations only available for reservations of two or more days<br>
+    &rarr;Payment may be made via GooglePay, Credit or Debit Card, Paypal or cash<br>
+    &rarr;Rentals may be returned to any of our two locations<br>
+  </p>
     <form method="get" action="thanks.html">
         <fieldset>
           <legend>Personal Details</legend>
@@ -46,37 +60,43 @@
             >Phone: <input type="tel" name="phone"
           /></label>
           <label class="personal"
-            >Zip Code*:
+            >Home State/Country:
             <input
               type="text"
-              name="zip"
-              pattern="(\d{5}([\-]\d{4})?)"
+              name="state"
               title="mandatory five numbers, with four optional numbers"
-              required
+              
           /></label>
         </fieldset>
         <fieldset>
-          <legend>Storm Details</legend>
-          <label class="storm-details"
-            >Storm Date: <input type="date" name="date"
+          <legend>Rental Details</legend>
+          <label class="rental-details"
+            >Date: <input type="date" name="date"
           /></label>
-          <label class="storm-details"
-            >Storm Type: <input name="Stormtype" list="Storms"
-          /></label>
-          <datalist id="Storms">
-            <option value="Flash Flood"></option>
-            <option value="Hail"></option>
-            <option value="Hurricane"></option>
-            <option value="Thunderstorm"></option>
-            <option value="Tornado"></option>
-          </datalist>
-          <label class="storm-severity"
-            >Storm Severity:
+          <label class="rental-period"
+          >Period From: <input type="date" name="from" required
+        /> To: 
+      <input type="date" name="to" required></label>
+
+         <label> Rental Type <select class="rental-type"
+            name="rentaltype" 
+            id="rentals"
+            onchange="selectResponse()">
+            <option value="" disabled selected>Select a rental type</option>
+            <option value="Honda Metro">Honda Metro</option>
+            <option value="Honda Dio">Honda Dio</option>
+            <option value="Honda PCX-150">Honda PCX-150</option>
+            <option value="Honda ATV">Honda ATV</option>
+            <option value="Jeep-4">Jeep-4</option>
+            <option value="Jeep-2">Jeep-2</option>
+          </select></label>
+          <label class="number"
+            >Number of Persons:
             <input
               type="range"
               value="5"
               min="1"
-              max="10"
+              max="5"
               step="1"
               list="tickmarks"
               oninput="adjustRating(this.value)"
@@ -88,65 +108,35 @@
               <option value="2"></option>
               <option value="3"></option>
               <option value="4"></option>
-              <option value="5"></option>
-              <option value="6"></option>
-              <option value="7"></option>
-              <option value="8"></option>
-              <option value="9"></option>
-              <option value="10"></option>
+              <option value="5"></option>    
             </datalist>
           </label>
-
-          <label class="storm-details"
-            >Storm Region:
-
-            <select
-              name="region"
-              id="stormregion"
-              onchange="selectResponse()"
-            >
-              <option value="" disabled selected>Select Region ...</option>
-              <option value="Soda Springs">Soda Springs</option>
-              <option value="Fish Haven">Fish Haven</option>
-              <option value="Preston">Preston</option>
-            </select>
-          </label>
-        </fieldset>
-        <fieldset>
-          <legend>Danger Level</legend>
-          Are you in danger?
-          <label class="danger"
-            ><input type="radio" name="danger-level" value="Yes" /> Yes</label
-          >
-          <label class="danger"
-            ><input type="radio" name="danger-level" value="Maybe" />
-            Maybe</label
-          >
-          <label class="danger"
-            ><input type="radio" name="danger-level" value="No" /> No</label
-          >
         </fieldset>
         <fieldset>
           <legend>Additional Comments</legend>
-          <label class="storm-details"
+          <label class="comments"
             >Any Comments?
             <textarea
-              placeholder="Please enter any other information in this box"
+              placeholder="Please specify if you require any special accommodations"
             ></textarea>
           </label>
         </fieldset>
+        <label>
+          <input type="checkbox" name="agreement" required>
+          I have read and agreed to the rental and reservation conditions
+        </label>
         <input
             class="submitbtn"
             type="submit"
             name="sbmtbtn"
-            value="Report Storm"
+            value="Make Reservation"
         />
       </form>
 </main>
         <footer>
             <p>&copy;2022|Bamidele Olawale Ajayi|WDD230</p>
         </footer>
-        <script src="rentals.js"></script>
+        <script src="scripts.js"></script>
         
     </body>
     </html>

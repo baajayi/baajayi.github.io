@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Page for Scoot Island">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+    <title>Scoot Island Contact Page</title>
+</head>
+<body class="main-body">
+    <header>
+    
+         <img src="images/scoot-logo.jpg" alt="site-logo">
+         <article class="header">
+        <h1>Scoot Island</h1>
+        <p>Enjoy Coruzel</p></article></header>
+        <nav class="navigation"> 
+            <a id="ham" href="#" onclick="toggleMenu()">&#9776; Menu </a>
+            <a  href="index.html">Home</a>
+            <a  href="rentals.html">Rentals</a>
+            <a href="reservations.html">Reservations</a>
+            <a  href="tours.html">Tours</a>
+            <a class="active" href="#">Contact</a>
+        </nav>
+        <main>
+           
+                <form action="">
+                    <fieldset class="contact-form">
+                        <Legend>Contact Us</Legend>
+                        <label >
+                            Name: <input type="text" name="name" required>
+                        </label>
+                        <label >
+                            Email: <input type="email" name="mail" required>
+                        </label>
+                        <label>
+                           Message:  <textarea placeholder="Your message to us goes here"></textarea>
+                        </label>
+                        <input
+                        class="submitbtn"
+                        type="submit"
+                        name="sbmtbtn"
+                        value="Send Message"
+                    />
+                    <aside>
+                        <p>Phone us on +52 123 456 789 <br> Email us at contact@scootisland.net</p>
+                        <p> For rentals and reservations go <a href="reservations.html">here</a></p>
+                    </aside>
+                    </fieldset>
+                </form>
+                <div>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1DrqVBgmWIi6JQ0kYm9CxZc62t4VN_55N&ehbc=2E312F" width="640" height="480"></iframe>
+            </div>
+        </main>
+<footer>
+    <p>&copy;<span id="year"></span>|Bamidele Olawale Ajayi|WDD230|<span id="dateofnow"></span></p>
+</footer>
+<script src="rentals.js"></script>
+
+</body>
+</html>

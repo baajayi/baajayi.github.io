@@ -10,6 +10,10 @@ nav {
     
 
 }
+nav a:first-child {
+    display: none;
+}
+
 nav a {
     display: flex;
     flex: 1 1 100%;
@@ -50,11 +54,9 @@ h2, h3 {
     background-color: #e2a0ff;
     text-align: center;
 }
-body {
+.main-body {
     max-width: 960px;
     margin: auto;
-    
-    
 }
 .rentals {
     width: 96%;
@@ -101,6 +103,7 @@ body {
     }
 main {
     background-color: #b7ffd8;
+    padding: .2em;
 }
 article p {
     margin-top: 2px;
@@ -113,17 +116,31 @@ article p {
 .banner-div {
     position: relative;
 }
-.banner-div button {
+
+.action-call {
+    height: 50px;
+    background:radial-gradient(#bbb, #e2a0ff);
+    opacity: 0.9;
     position: absolute;
     top: 20px;
+    text-align: center;
+    align-content: center;
     left: 20px;
     width: 100%;
     height: 100px;
     max-width: 20rem;
-    background: radial-gradient(#eee, #e2a0ff);
-    opacity: 0.9;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    border: 6px solid #000;
+    border-radius: 25px;
+    font-size: 30px;
+}
+.tour-page {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+}
+.tour-page div {
+    border: 1px solid #333;
+    padding: 0.2em;
 }
 .banner {
     width: 100%;
@@ -157,14 +174,186 @@ table, th, td {
 table {
     margin: 2em;
 }
-@media only screen and (max-width: 500px) {
-    body {
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+.atlantis {
+    background-color: #e8ffb7;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 5px;
+}
+.submarine {
+    text-align: justify;
+}
+.felipe{
+    width: 100%;
+    font-style: italic;
+  }
+  .maya {
+      text-align: justify;
+  }
+  .mayaruins {
+      width: 40%;
+      float: right;
+      margin: 0 1em 0 1em ;
+  }
+form {
+    display: flex;
+    flex-flow: column;
+}
+  fieldset {
+    display: block;
+    margin: 2rem 0;
+    border-radius: 10px;
+    padding: 0.5rem 2%;
+    display: block;
+    background-color: #EEF4ED
+}
+
+legend {
+    margin-left: 2%;
+}
+.personal label {
+   display: flex;
+   flex-flow: column;
+   
+   
+}
+.personal input {
+    display: flex;
+    flex-flow: column;
+    margin: 0 0 20px 0;
+    padding: .75rem;
+    height: 40px;
+    
+}
+
+.rental-details label {
+    display: flex;
+    flex-flow: column;
+}
+.rental-details input{
+    display: flex;
+    flex-flow: column;
+    margin: 0 0 20px 0;
+    width: 100%;
+    height: 40px;
+    max-width: 20rem;
+    padding: .75rem;
+}
+.rental-period {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 0 20px 0;
+    
+}
+textarea {
+    width: 60%;
+    height: 350px;
+    margin:  2%;
+    padding: 1em;
+    border-radius: 10px;
+    border: solid 1px #333;
+}
+.contact-form textarea {
+    width: 60%;
+    height: 100px;
+}
+
+.contact-form {
+    display: block;
+    flex-flow: column;
+}
+.contact-form input {
+    display: flex;
+    flex-flow: column;
+    margin: 0 1em 0 0;
+    height: 40px;
+}
+.contact-form label {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 20rem;
+    margin: 0 1em 0 0;
+    padding: 1em;
+}
+.contact-form legend {
+    padding: .4em;
+}
+input {
+    border: solid 1px #333;
+}
+.number {
+    display: flex;
+
+    margin: 10px 0;
+    width: 100%;
+    padding: .2rem;
+}
+.comments {
+    display: flex;
+    flex-flow: column;
+}
+.submitbtn {
+    width: 100%;
+    max-width: 20rem;
+    background-color: #e2a0ff;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+input:required {
+    border-left: 6px solid red;
+}
+input:required:valid {
+    border-left: 6px solid blue;
+}
+@media only screen and (max-width: 1000px) {
+    nav a {
         display: block;
     }
     nav {
         display: block;
     }
+
+}
+@media only screen and (max-width: 700px) {
+    .main-body {
+        display: flex;
+        flex-flow: column;
+    }
+    nav {
+        display: block;
+    }
+    nav a {
+        display: none;
+    }
+    nav a:first-child {
+        display: block;
+    }
     .rentals {
         display: block;
     }
+    .responsive a{
+        display: block;
+        flex: 1 1 auto;
+        text-align: center;
+        margin: 2px;
+}
+    .responsive a:hover {
+        background-color: #EEF4ED;
+
+}
+header {
+    width: 100%;
+}
+.banner-div {
+    display: flex;
+    flex-flow: column;
+    flex-flow: 1 1 auto;
+}
 }

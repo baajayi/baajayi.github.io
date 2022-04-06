@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Scoot Island Rentals Page">
     <link type="text/css" rel="stylesheet" href="styles.css">
-    <title>Scoot Island Home Page</title>
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+    <title>Scoot Island Rentals Page</title>
 </head>
-<body>
+<body class="main-body">
     <header>
     
          <img src="images/scoot-logo.jpg" alt="site-logo">
          <article class="header">
         <h1>Scoot Island</h1>
-        <p>Forget your struggles and enjoy Coruzel</p></article></header>
-        <nav>
+        <p>Enjoy Coruzel</p></article></header>
+        <nav class="navigation"> 
+            <a id="ham" href="#" onclick="toggleMenu()">&#9776; Menu </a>
             <a  href="index.html">Home</a>
             <a class="active" href="#">Rentals</a>
             <a href="reservations.html">Reservations</a>
-            <a href="#">Tours</a>
-            <a href="#">Contact</a>
+            <a href="tours.html">Tours</a>
+            <a href="contact.html">Contact</a>
         </nav>
 <main>
 <div class="rentals"></div>
@@ -41,9 +44,10 @@
 <!-- </div> -->
 </main>
         <footer>
-            <p>&copy;2022|Bamidele Olawale Ajayi|WDD230</p>
+            <p>&copy;<span id="year"></span>|Bamidele Olawale Ajayi|WDD230|<span id="dateofnow"></span></p>
         </footer>
         <script src="rentals.js"></script>
+        <script src="scripts.js"></script>
         
     </body>
     </html>

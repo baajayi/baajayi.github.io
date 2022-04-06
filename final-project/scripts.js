@@ -9,13 +9,38 @@ let daysOfTheWeek = [
     "Saturday",
     
 ]
+let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+
+]
+let dayname = daysOfTheWeek[d.getDay()]
+let monthname = months[d.getMonth()]
+document.querySelector("#year").innerHTML = d.getFullYear()
+document.querySelector("#dateofnow").innerHTML = `${dayname}, ${d.getDate()} ${monthname} ${d.getFullYear()}`
+
+function toggleMenu() {
+	document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
+    document.getElementById("ham").textContent = "X Menu"
+    
+}
 const weatherInfo = "https://api.openweathermap.org/data/2.5/weather?id=3530103&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
 const forecastInfo = "https://api.openweathermap.org/data/2.5/forecast?id=3530103&units=imperial&appid=7d47d03772d90da70906388fcab359b7"
 fetch(weatherInfo)
     .then(response => response.json())
     .then((jsObject) => {
         
-        console.log(jsObject)
+        // console.log(jsObject)
         document.getElementById("currentweather").textContent = jsObject.weather[0].description
         document.getElementById("temp").textContent = jsObject.main.temp
         document.getElementById("speed").textContent = (jsObject.wind.speed).toFixed(2)
@@ -24,7 +49,7 @@ fetch(weatherInfo)
 fetch(forecastInfo)
     .then(response => response.json())
     .then((jsObject) => {
-        console.log(jsObject)
+        // console.log(jsObject)
     
         // for (let x = 0; x < jsObject["list"].length; x++){
         const datesOfWeather = jsObject["list"].filter((climate) =>{
@@ -100,3 +125,21 @@ fetch(rentalURL)
           card.appendChild(img)
     }
     })
+function adjustRating(rating) {
+    document.getElementById("ratingvalue").innerHTML = rating;
+    }
+function selectResponse() {
+    const s = document.querySelector("#selected")
+    const sel = document.querySelector("#rentals");
+    s.style.display = "block";
+    s.textContent = sel.value;
+    }
+
+
+
+
+
+
+
+
+    
