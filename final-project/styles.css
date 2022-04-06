@@ -250,6 +250,11 @@ legend {
     margin: 0 0 20px 0;
     
 }
+.rental-period input {
+    display: flex;
+    flex-flow: column;
+}
+
 textarea {
     width: 60%;
     height: 350px;
