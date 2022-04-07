@@ -117,7 +117,7 @@ article p {
     position: relative;
 }
 
-.action-call {
+.banner-div a {
     height: 50px;
     background:radial-gradient(#bbb, #e2a0ff);
     opacity: 0.9;
@@ -354,8 +354,21 @@ header {
     width: 100%;
 }
 .banner-div {
-    display: flex;
-    flex-flow: column;
-    
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    }
+    .banner {
+        grid-row: 1
+    }
+    .banner-div a {
+        grid-row: 2;
+        width: 96%;
+        justify-self: center;
+        position: static;
+    }
+    .weather {
+        grid-row: 3;
+        width: 100%;
+        position: static;
+    }
 }
