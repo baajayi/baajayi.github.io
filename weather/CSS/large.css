@@ -124,7 +124,10 @@ footer {
 }
 
 .day-weather {
-    border: solid 2px #000;
+    border: solid 3px #000
+}
+a:first-child {
+    display: contents;
 }
 
 .latercontent4 {
@@ -378,7 +381,13 @@ input:required:valid {
         margin-left: -5px;
 
     }
-   
+ body {
+     display: grid;
+     grid-template-columns: 1fr;
+ }
+ footer {
+     grid-row: 8;
+ }
     .forecast {
        margin-left: auto;
     }

@@ -49,7 +49,7 @@ fetch(weatherInfo)
 fetch(forecastInfo)
     .then(response => response.json())
     .then((jsObject) => {
-        // console.log(jsObject)
+        console.log(jsObject)
     
         // for (let x = 0; x < jsObject["list"].length; x++){
         const datesOfWeather = jsObject["list"].filter((climate) =>{

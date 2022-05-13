@@ -283,9 +283,7 @@ input:required {
 input:required:valid {
     border-left: blue solid 6px;  
 }
-.home-body {
-    max-width: 90%;
-}
+
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
