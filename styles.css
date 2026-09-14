@@ -224,8 +224,29 @@ a:hover { color: var(--fg); }
 .repo {
   font-family: var(--mono);
   font-size: .8125rem;
-  display: inline-block;
-  margin-top: .85rem;
+  margin: .85rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .4rem 1.4rem;
+}
+
+/* a working demo outranks a repo link — give it the weight */
+.repo .demo {
+  font-weight: 500;
+  border: 1px solid var(--accent);
+  padding: .2rem .7rem;
+  text-decoration: none;
+}
+.repo .demo:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.repo .note {
+  color: var(--fg-dim);
+  opacity: .75;
+  flex-basis: 100%;
 }
 
 /* the redaction slab — stands in for a name that can't be published */
