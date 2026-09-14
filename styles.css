@@ -228,7 +228,7 @@ a:hover { color: var(--fg); }
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: .4rem 1.4rem;
+  gap: .55rem 2.5rem;
 }
 
 /* a working demo outranks a repo link — give it the weight */
