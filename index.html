@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bamidele Ajayi — Full-stack engineer</title>
+<meta name="description" content="Full-stack engineer building retrieval and agent systems in production. Python, TypeScript, GCP, AWS.">
+<meta name="color-scheme" content="dark light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="wrap">
+
+  <header class="hero">
+    <h1 class="name">Bamidele Ajayi<span class="caret" aria-hidden="true"></span></h1>
+    <p class="lede">Full-stack engineer. I build retrieval and agent systems, and the infrastructure that keeps them running.</p>
+    <p class="bio">Mostly Python and TypeScript on Google Cloud and AWS: multitenant RAG services, agents that keep their own indexes current, and the pipelines and Terraform underneath. Some of that work is open source. Much of it belongs to clients and employers — so this page says what I built and what it runs on, and stops there.</p>
+    <ul class="contact">
+      <li><a href="mailto:bamideleoajayi@outlook.com">bamideleoajayi@outlook.com</a></li>
+      <li><a href="https://github.com/baajayi">github.com/baajayi</a></li>
+      <li><a href="https://www.linkedin.com/in/bamideleajayi">linkedin.com</a></li>
+     
+    </ul>
+  </header>
+
+  <main id="main">
+
+    <section class="section">
+      <h2>Flagship</h2>
+      <article class="flagship">
+        <h3>Multitenant RAG platform for faith organizations</h3>
+        <p>A single production service that hosts conversational assistants for many organizations at once, each answering only from its own documents. One deployment, one codebase, strict isolation between tenants — so onboarding a new organization is configuration, not a fork.</p>
+        <ul class="specs">
+          <li><b>Tenant isolation</b> via per-tenant Pinecone namespaces, with opt-in shared knowledge bases</li>
+          <li><b>Three routing modes</b> — subdomain, URL path, and an <code>X-Tenant-ID</code> header for API clients</li>
+          <li><b>Redis caching</b> of query results and embeddings, with per-tenant token-bucket rate limits</li>
+          <li><b>Ingestion</b> of PDF, DOCX, plain text and live web pages</li>
+          <li><b>Tenant-isolated S3 logging</b>, batched, plus component-level health checks</li>
+          <li><b>Flask and gunicorn</b> on AWS Elastic Beanstalk with autoscaling policies</li>
+        </ul>
+        <p class="stack">Python, Flask, Pinecone, OpenAI, Redis, AWS Elastic Beanstalk, S3</p>
+        <p class="repo"><a href="https://wearesolace.com">wearesolace.com</a></p>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Selected work</h2>
+      <div class="ledger">
+
+        <article class="entry">
+          <p class="state">client<br>closed source</p>
+          <div>
+            <h3>Self-syncing RAG assistant</h3>
+            <p>An assistant for <span class="redact" style="--w:13ch"><span class="sr-only">a client name, redacted</span></span>, an Episcopal parish. A LangGraph agent re-crawls the parish website on a weekly schedule, diffs each page against stored state, and upserts or deletes vectors accordingly — so the assistant stops answering from last season's content without anyone maintaining it.</p>
+            <p class="stack">FastAPI, LangChain, LangGraph, Vertex AI, Gemini, Pinecone, Cloud Run Jobs, Docker</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state">internal<br>closed source</p>
+          <div>
+            <h3>Self-serve activation service</h3>
+            <p>Paste a website address and about ten seconds later you are talking to an assistant trained on that site, previewed floating over a screenshot of your own homepage in your own brand color. Headless browser capture and color extraction remove every configuration step between interest and a working demo.</p>
+            <p class="stack">FastAPI, Playwright, Pinecone, OpenAI, AWS Lambda container images</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state">internal<br>closed source</p>
+          <div>
+            <h3>Deployment transmission engine</h3>
+            <p>Rolling out a widget to hundreds of small organizations means waiting on hundreds of webmasters. This engine integrates once per website platform instead — the CMS, the church management system, the donation tool — so each new customer becomes an entry in a validated registry rather than a support ticket.</p>
+            <p class="stack">Python, PyYAML, jsonschema, Playwright</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state">employer<br>closed source</p>
+          <div>
+            <h3>External record discovery pipeline</h3>
+            <p>At <span class="redact" style="--w:11ch"><span class="sr-only">an employer name, redacted</span></span>, a large genealogy platform, I built an LLM pipeline that extracts and validates links to external record collections across a very large wiki, paired with a human labeling and grading loop so accuracy was measured rather than assumed.</p>
+            <p class="stack">Python, LLM extraction, human-in-the-loop evaluation</p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state">employer<br>closed source</p>
+          <div>
+            <h3>Fixed-income fair value platform</h3>
+            <p>Front-end and serverless backend work on a bond pricing platform at <span class="redact" style="--w:15ch"><span class="sr-only">an employer name, redacted</span></span>, a fintech firm. Typed React interfaces under end-to-end test coverage, against a serverless Python API.</p>
+            <p class="stack">React, TypeScript, Cypress, AWS SAM, Python</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Open source</h2>
+      <div class="ledger">
+
+        <article class="entry">
+          <p class="state is-open">public</p>
+          <div>
+            <h3><a href="https://github.com/baajayi/expressentry">Express Entry CRS simulator</a></h3>
+            <p>Scores a Canadian permanent residence profile against the official IRCC criteria, compares it to the live rounds-of-invitations feed on canada.ca, and re-scores modified profiles — so every suggested improvement comes with the exact number of points it is worth.</p>
+            <p class="stack">FastAPI, httpx, pydantic</p>
+            <p class="repo"><a href="https://github.com/baajayi/expressentry">github.com/baajayi/expressentry</a></p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state is-open">public</p>
+          <div>
+            <h3><a href="https://github.com/baajayi/weather-energy-analysis">Weather and energy pipeline</a></h3>
+            <p>A daily pipeline joining NOAA weather with EIA consumption data to support utility demand forecasting, with a ninety-day backfill, retry and rate-limit handling, a quality score on every run, and a dashboard for the correlations it finds.</p>
+            <p class="stack">Python, Streamlit, pandas</p>
+            <p class="repo"><a href="https://github.com/baajayi/weather-energy-analysis">github.com/baajayi/weather-energy-analysis</a></p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state is-open">public</p>
+          <div>
+            <h3><a href="https://github.com/baajayi/faceless">Faceless</a></h3>
+            <p>An agentic content pipeline for children's video: research, script, storyboard, generated visuals and voiceover, assembly, then publication — with a moderation gate that content has to clear before anything ships.</p>
+            <p class="stack">FastAPI, Celery, Redis, Alembic, Docker Compose</p>
+            <p class="repo"><a href="https://github.com/baajayi/faceless">github.com/baajayi/faceless</a></p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state is-open">public</p>
+          <div>
+            <h3><a href="https://github.com/baajayi/weather_assistant">Weather assistant</a></h3>
+            <p>Ask about the weather anywhere in plain English and get an answer drawn from current conditions, forecast and history together, rather than three separate lookups.</p>
+            <p class="stack">Flask, OpenAI Assistants API, OpenWeatherMap</p>
+            <p class="repo"><a href="https://github.com/baajayi/weather_assistant">github.com/baajayi/weather_assistant</a></p>
+          </div>
+        </article>
+
+        <article class="entry">
+          <p class="state is-open">public</p>
+          <div>
+            <h3><a href="https://github.com/baajayi/aog-devo">Devotional generator</a></h3>
+            <p>Turns a scripture reference into an age-appropriate family devotional, grounded by retrieval so the output stays inside the source material instead of inventing it.</p>
+            <p class="stack">Flask, Pinecone, OpenAI, Vercel</p>
+            <p class="repo"><a href="https://github.com/baajayi/aog-devo">github.com/baajayi/aog-devo</a></p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What I work with</h2>
+      <dl class="skills">
+        <div><dt>languages</dt><dd>Python, TypeScript, JavaScript, SQL, Bash</dd></div>
+        <div><dt>ai</dt><dd>Retrieval-augmented generation, agentic pipelines, LangChain and LangGraph, evaluation loops, OpenAI, Gemini and Vertex AI</dd></div>
+        <div><dt>backend</dt><dd>FastAPI, Flask, Celery, serverless APIs</dd></div>
+        <div><dt>frontend</dt><dd>React, TypeScript, Cypress, Streamlit</dd></div>
+        <div><dt>cloud</dt><dd>Google Cloud Run, Cloud Run Jobs, Cloud SQL and Vertex AI; AWS Lambda, Elastic Beanstalk, S3 and SAM</dd></div>
+        <div><dt>infra</dt><dd>Docker, Terraform, Kubernetes, Cloud Build, CI pipelines</dd></div>
+        <div><dt>data</dt><dd>Pinecone, PostgreSQL, Redis, SQLite</dd></div>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>The blocks above stand in for client and employer names covered by agreements I intend to keep. Happy to talk through any of that work in more depth, within those limits — <a href="mailto:bamideleoajayi@outlook.com">get in touch</a>.</p>
+  </footer>
+
+</div>
+</body>
+</html>
