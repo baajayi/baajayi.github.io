@@ -71,7 +71,7 @@ gh repo create portfolio --public --source=. --push
 gh api -X POST repos/baajayi/portfolio/pages -f 'source[branch]=main' -f 'source[path]=/'
 ```
 
-Live at `https://baajayi.github.io/portfolio`.
+Live at `https://baajayi.github.io/`.
 
 Netlify and Vercel also work with no configuration — drop the folder in, no build command,
 publish directory `.`.
